@@ -26,19 +26,19 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url('https://post-phinf.pstatic.net/MjAxNzExMThfMTg4/MDAxNTEwOTg1MzI5MTQ2.gW1yx3u1W4Z5qwHrn3s5EZxu2JJ4FS_6oo-tGkzhZxkg.dfwC0Xi0C0-Ytx1jds7MURxXSV_VewZ555MoRXCFLzcg.JPEG/59528_supermoon_3840x2160.jpg');
+  background-image: url('./image/background1.jpg');
   min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url("https://upload.inven.co.kr/upload/2013/04/26/bbs/i0184487661.jpg");
+  background-image: url("./image/background2.jpg");
   min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url("https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F2577184451E8D75605874A");
+  background-image: url("./image/background3.jpg");
   min-height: 400px;
 }
 
@@ -87,7 +87,7 @@ body, html {
 <!-- 로고 텍스트가있는 첫 번째 이미지 -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">JEONGHOON</span> WEB</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">JEONG-HOON <span class="w3-hide-small">PORTFOLIO</span> WEB</span>
   </div>
 </div>
 
@@ -100,8 +100,8 @@ body, html {
     qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99875C355A3F52EF27" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      <p><b><i class="fa fa-user w3-margin-right"></i>박정훈</b></p><br>
+      <img src="./image/jh2.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="190" height="200">
     </div>
 
     <!-- 작은 사이즈에서 이 텍스트 숨기기 -->
@@ -111,6 +111,7 @@ body, html {
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </div>
+  
   <!--<p class="w3-large w3-center w3-padding-16">Im really good at:</p>
   <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
   <div class="w3-light-grey">
@@ -156,47 +157,49 @@ body, html {
 
 <!-- Container (Portfolio 섹션) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+  <h3 class="w3-center">MY SKILLS</h3>
+  <p class="w3-center"><em>웹, 앱 개발쪽에 관심이생겨 열심히 공부하고 있습니다.<br> </em></p><br>
 
   <!-- 반응 형 그리드. 태블릿, 노트북 및 데스크톱의 4개 열. 휴대 기기 / 작은 화면에 스택 (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+      <img src="./image/java.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="JAVA">
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+      <img src="./image/eclipse.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="ECLIPSE">
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+      <img src="./image/spring.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="SPRING">
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+      <img src="./image/mysql.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="MySQL">
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+      <img src="./image/html.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="HTML">
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+      <img src="./image/css.png" style="width:70%" onclick="onClick(this)" class="w3-hover-opacity" alt="CSS">
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+      <img src="./image/javascript.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Javascript">
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+      <img src="./image/jquery.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="jquery">
     </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+    <a href="./profile/profile.html"><button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">더보기</button></a>
   </div>
 </div>
+
+<br><br>
 
 <!--클릭시 전체 크기 이미지의 Modal-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -221,7 +224,7 @@ body, html {
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
-      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+      <img src="./image/address.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="ADDRESS">
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
@@ -229,8 +232,8 @@ body, html {
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +82 26722963<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: vvv6737@naver.com<br>
       </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
+      <p><i class="fa fa-envelope-o"></i> 메일을 남겨주세요 :</p>
+      <form action="https://mail.naver.com/" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -252,9 +255,8 @@ body, html {
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>맨위로</a>
   <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <a href="https://www.facebook.com/profile.php?id=100003721659218"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/0.001118_mile/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
   </div>
 </footer>
  
