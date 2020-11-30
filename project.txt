@@ -1,0 +1,26 @@
+스프링 초기설정
+폼.xml
+mybatis
+log4j
+---------------
+컨트롤러
+DTO, DAO
+(VO는 getter만 있다(읽기 전용. 변경불가))
+(DTO는 getter setter다있다(변경가능))
+mapper, service
+--------------
+jsp 
+먼저 메인페이지
+user, board, product, cart, search, login
+
+boardetail
+loginpro
+searchdetail
+productdetail
+---
+buypage
+결제수단페이지
+
+
+individual project
+https://min-it.tistory.com/2?category=751930
