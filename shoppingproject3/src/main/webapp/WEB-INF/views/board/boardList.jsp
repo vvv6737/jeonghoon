@@ -3,7 +3,6 @@
 <%@ taglib prefix="c"   		uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" 		uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="layoutTag" 	tagdir="/WEB-INF/tags" %>
-
 <layoutTag:layout>
 <!DOCTYPE html>
 <html>
@@ -58,23 +57,21 @@
 				<td class="info" onclick="location.href='/board/detailComment/${board.boardno}'">${board.boardno}</td>
 				<td>${board.subject}
 				&nbsp;
-									<c:if test="${board.newMark}">
-										<span class="badge badge-pill badge-danger">new</span>
-									</c:if>
-									
+					<c:if test="${board.newMark}">
+						<span class="badge badge-pill badge-danger">new</span>
+					</c:if>
 				</td>
 				<td>${board.writer}</td>
 				<td>${board.content}</td>
 				<td><fmt:formatDate value="${board.regdate}" pattern="yyyy년 MM월 dd일"/></td>
 				<td><c:out value="${board.boardhit}"/></td>
 				
-				
 			</tr>
 		</c:forEach>
 	
 	</table>
 	
-	<ul class="pagination justify-content-center">
+	<ul class="pager justify-content-center">
 		<c:if test="${pageMaker.prev}">
 			<li class="page-item"><a href="/board/boardList${pageMaker.makeSearch(pageMaker.startPage-1)}">이전</a></li>
 		</c:if>
@@ -89,7 +86,7 @@
 	</ul>
 </div>
 <!-- 검색 버튼 -->
-	 <div class="search">
+	<div class="search">
     <select name="searchType">
       <option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
       <option value="s"<c:out value="${scri.searchType eq 's' ? 'selected' : ''}"/>>제목</option>

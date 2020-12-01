@@ -72,7 +72,4 @@ public class ProductDTO {
 				+ ", productsalescnt=" + productsalescnt + "]";
 	}
 	
-	
-	
-	
 }

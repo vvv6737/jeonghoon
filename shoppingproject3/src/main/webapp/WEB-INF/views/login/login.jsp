@@ -33,7 +33,8 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-4">
-						<button class="btn btn-success" type="submit" id="submit">로그인</button>
+						<button class="btn btn-success" type="submit" id="submit">회원 로그인</button>
+						<button class="btn btn-default" type="submit" id="submit">매니저 로그인</button>
 						<button class="btn btn-danger" type="reset">취소</button>
 						<button class="btn btn-info" type="button" id="proRegisterBtn">회원가입</button>
 					</div>
@@ -47,6 +48,7 @@
 					<button id="proDeleteBtn" type="button">회원탈퇴</button>
 					<button id="logoutBtn" type="button">로그아웃</button> 
 					<button id="boardBtn" type="button">게시판</button>
+					<button type="button" onclick="location.href='/product/productinsert'">제품 등록</button>
 					
 				</div>
 			</c:if>
@@ -99,7 +101,6 @@ $(document).ready(function(){
 	$("#boardBtn").on("click",function(){
 		location.href="/board/boardList";
 		});
-	
 })
 
 </script>
