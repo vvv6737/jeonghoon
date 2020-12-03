@@ -46,5 +46,4 @@ public int boardHit(int boardno) throws Exception;
 
 //댓글목록
 public List<CommentDTO> commentList(int boardno) throws Exception;
-
 }

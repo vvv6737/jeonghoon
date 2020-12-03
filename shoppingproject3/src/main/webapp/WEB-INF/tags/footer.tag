@@ -2,6 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <footer class="container-fluid text-center">
+<br>
 <hr>
 	<div id="copy">
 		All contents Copyright 2020 JBoard Inc. all rights reservied<br>

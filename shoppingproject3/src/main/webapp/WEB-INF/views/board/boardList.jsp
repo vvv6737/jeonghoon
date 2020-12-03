@@ -9,6 +9,10 @@
 <head>
 <meta charset="UTF-8">
 <title>boardList.jsp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
 .navbar-inverse .narbar-nav > .active > a,
 .navbar-inverse .narbar-nav > .active > a:focus,
@@ -19,6 +23,7 @@
 }
 	ul{list-style:none; float:center; padding:6px;}
 
+.search
 	
 </style>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -28,13 +33,10 @@
 <div class="container-fluid">
 	<h2 align="left">자 유 게 시 판</h2>
 	
-	
 	<button class="btn btn-primary" onclick="location.href='/board/boardInsert'">글쓰기</button>
-	
 	
 	<table class="table table-hover table-bodered">
 		<thead>
-		
 			<tr>
 				<th>#번호</th>
 				<th>제목</th>
@@ -53,7 +55,6 @@
 		</c:if>
 				<c:forEach var="board" items="${list}">
 			<tr>
-				
 				<td class="info" onclick="location.href='/board/detailComment/${board.boardno}'">${board.boardno}</td>
 				<td>${board.subject}
 				&nbsp;
@@ -65,12 +66,9 @@
 				<td>${board.content}</td>
 				<td><fmt:formatDate value="${board.regdate}" pattern="yyyy년 MM월 dd일"/></td>
 				<td><c:out value="${board.boardhit}"/></td>
-				
 			</tr>
 		</c:forEach>
-	
 	</table>
-	
 	<ul class="pager justify-content-center">
 		<c:if test="${pageMaker.prev}">
 			<li class="page-item"><a href="/board/boardList${pageMaker.makeSearch(pageMaker.startPage-1)}">이전</a></li>
@@ -85,47 +83,48 @@
 		</c:if>
 	</ul>
 </div>
+
+
 <!-- 검색 버튼 -->
 	<div class="search">
-    <select name="searchType">
-      <option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
-      <option value="s"<c:out value="${scri.searchType eq 's' ? 'selected' : ''}"/>>제목</option>
-      <option value="c"<c:out value="${scri.searchType eq 'c' ? 'selected' : ''}"/>>내용</option>
-      <option value="w"<c:out value="${scri.searchType eq 'w' ? 'selected' : ''}"/>>작성자</option>
-      <option value="sc"<c:out value="${scri.searchType eq 'sc' ? 'selected' : ''}"/>>제목+내용</option>
-    </select>
-
-    <input type="text" name="keyword" id="keywordInput" value="${scri.keyword}"/>
-
-    <button id="searchBtn" type="button">검색</button>
+	    <select name="searchType">
+	      <option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
+	      <option value="s"<c:out value="${scri.searchType eq 's' ? 'selected' : ''}"/>>제목</option>
+	      <option value="c"<c:out value="${scri.searchType eq 'c' ? 'selected' : ''}"/>>내용</option>
+	      <option value="w"<c:out value="${scri.searchType eq 'w' ? 'selected' : ''}"/>>작성자</option>
+	      <option value="sc"<c:out value="${scri.searchType eq 'sc' ? 'selected' : ''}"/>>제목+내용</option>
+	    </select>
+	    
+	    <input type="text" name="keyword" id="keywordInput" value="${scri.keyword}"/>
+	    <button id="searchBtn" type="button">검색</button>
+	    
+    </div>
     
-
-  <script>
-
+    
+    
+    
+<script>
 $(document).ready(function(){
         $('#searchBtn').click(function() {
        self.location = "/board/boardList" + '${pageMaker.makeQuery(1)}' + "&searchType=" + $("select option:selected").val() + "&keyword=" + encodeURIComponent($('#keywordInput').val());
         });
       }); 
 </script>
-<script>
 
-</script>
 <script>
 $(document).ready(function(){
 	$(".btn-primary").on("click",function(){
 		
-		if(${member == null}){
-			alert("로그인을 하셔야 합니다.");
-			location.href="/login/login";
-			}
-		else if(${member != null}){
-			location.href="/board/boardInsert";
-			}
-		});
+	if(${member == null}){
+		alert("로그인을 하셔야 합니다.");
+		location.href="/login/login";
+		}
+	else if(${member != null}){
+		location.href="/board/boardInsert";
+		}
+	});
 });
 </script>
-</div>
 </body>
 </html>
 </layoutTag:layout>
