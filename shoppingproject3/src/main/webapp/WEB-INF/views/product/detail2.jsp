@@ -2,15 +2,19 @@
 <%@ page session="true"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="layoutTag" tagdir="/WEB-INF/tags"%>
+
 <!DOCTYPE HTML>
-<!--
-	Caminar by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
+<style>
+/* Set black background color, white text and some padding */
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+</style>
 	<head>
-		<title>Caminar by TEMPLATED</title>
+		<title>상세정보</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/static/assets/css/main.css" />
@@ -19,7 +23,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="#">Fashionable <span>by ${productdetail.productname}</span></a></div>
+				<div class="logo"><a href="/product/productlist">Fashionable <span>by ${productdetail.productname}</span></a></div>
 			</header>
 
 		<!-- Main -->
@@ -30,7 +34,7 @@
 					<section id="one" class="wrapper style1">
 
 						<div class="image fit flush">
-							<img src="/static/images/pic02.jpg" alt="" />
+							<img src="/static/images/prodetailmain.jpg" alt="" />
 						</div>
 						<header class="special">
 							<h2>아름다운 패션의 완성</h2>
@@ -98,7 +102,6 @@
 							</div>
 						</div>
 					</section>
-
 				</div>
 			</section>
 
@@ -113,10 +116,14 @@
 					</ul>
 				</div>
 				<div class="copyright">
-					&copy; Untitled. All rights reserved. Images <a href="https://unsplash.com">Unsplash</a> Design <a href="https://templated.co">TEMPLATED</a>
+					&copy; All contents Copyright 2020 JBoard Inc. all rights reservied<br>
+					Contact mail : class403@naver.com Tel: +82 02 1234 5678 Fax +82 02
+					7777 8888
 				</div>
 			</footer>
-
+			
+			
+			
 		<!-- Scripts -->
 			<script src="/static/assets/js/jquery.min.js"></script>
 			<script src="/static/assets/js/jquery.poptrox.min.js"></script>

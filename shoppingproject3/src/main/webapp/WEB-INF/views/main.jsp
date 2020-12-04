@@ -10,19 +10,16 @@
 <head>
 <link rel="icon" type="image/x-icon" href="/static/images/aland.jpg" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
 <meta charset="UTF-8">
 <title>메인</title>
 <style>
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {
 	height: 450px
-}
-
-/* Set black background color, white text and some padding */
-footer {
-	background-color: #555;
-	color: white;
-	padding: 15px;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -54,7 +51,7 @@ footer {
 	min-height: 80%;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
+/* 스크롤 */
 @media only screen and (max-device-width: 1600px) {
 	.bgimg-1 {
 		background-attachment: scroll;
@@ -66,6 +63,10 @@ footer {
 	body, h1, h2, h3, h4, h5, h6, .w3-wide {
 		font-family: "Montserrat", sans-serif;
 	}
+}
+
+.container-fluid {
+	font-family: 'Nanum Gothic', sans-serif;
 }
 </style>
 </head>
@@ -89,25 +90,14 @@ footer {
 	</div>
 	<div class="w3-padding-64 w3-large w3-text-grey"
 		style="font-weight: bold">
-		<a href="#" class="w3-bar-item w3-button">Shirts</a> <a href="#dress"
-			class="w3-bar-item w3-button">Dresses</a> <a onclick="myAccFunc()"
-			href="javascript:void(0)"
-			class="w3-button w3-block w3-white w3-left-align" id="myBtn">
-			Jeans <i class="fa fa-caret-down"></i>
-		</a>
-		<div id="demoAcc"
-			class="w3-bar-block w3-hide w3-padding-large w3-medium">
-			<a href="#" class="w3-bar-item w3-button w3-light-grey"><i
-				class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-		</div>
-		<a href="#" class="w3-bar-item w3-button">Jackets</a> <a href="#"
-			class="w3-bar-item w3-button">Gymwear</a> <a href="#"
-			class="w3-bar-item w3-button">Blazers</a> <a href="#"
-			class="w3-bar-item w3-button">Shoes</a>
+		<a href="#" class="w3-bar-item w3-button">TOP</a>
+		<a href="#" class="w3-bar-item w3-button">BOTTOM</a>
+		<a href="#" class="w3-bar-item w3-button">ACC</a>
+		<a href="#" class="w3-bar-item w3-button">SHOES</a>
+		<a href="#" class="w3-bar-item w3-button">SALE</a>
 	</div>
+	<br><br><br><br><br><br><br><br>
 	<a href="#contact" class="w3-bar-item w3-button w3-padding">Contact</a>
-	<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding"
-		onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
 	<a href="#footer" class="w3-bar-item w3-button w3-padding">Subscribe</a>
 </nav>
 
@@ -120,12 +110,11 @@ footer {
 	</form>
 </div>
 
-
-
 <div class="container-fluid text-center">
 	<div class="row content">
 		<div class="col-sm-1 sidenav"></div>
 		<div class="col-sm-9 text-left">
+		
 			<div class="container-fluid bg-4 text-center">
 				<h3>상품 둘러보기</h3>
 				<br>
@@ -151,12 +140,12 @@ footer {
 					</div>
 
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/productdetail/2'"> <img
+						<a onclick="location.href='/product/detail2/4'"> <img
 							src="/static/images/mtm.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/productdetail/2'">맨투맨</a>
+							<a onclick="location.href='/product/detail2/4'">맨투맨</a>
 						</p>
 					</div>
 
@@ -191,12 +180,12 @@ footer {
 					</div>
 
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/productdetail/2'"> <img
+						<a onclick="location.href='/product/detail2/3'"> <img
 							src="/static/images/shoes.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/productdetail/2'">신발</a>
+							<a onclick="location.href='/product/detail2/3'">신발</a>
 						</p>
 					</div>
 
@@ -227,8 +216,6 @@ footer {
 							src="https://ext.fmkorea.com/files/attach/new/20191012/486616/1351010096/2272376735/ba9a8fb2a6735f4f2787821924619db5.jpeg"
 							class="img-circle" height="65" width="65" alt="Avatar">
 					</div>
-					<button type="button"
-						onclick="location.href='/product/productinsert'">제품 등록</button>
 				</c:if>
 
 				<div class="well">
@@ -413,10 +400,10 @@ footer {
 				<p>신상</p>
 			</div>
 			<div class="well">
-				<p>후후훙루ㅜ루루</p>
+				<p>세일</p>
 			</div>
 			<div class="well">
-				<p>리라ㅣ라ㅣ릴</p>
+				<p>잠바</p>
 			</div>
 		</div>
 	</div>
