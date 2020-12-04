@@ -33,8 +33,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-4">
-						<button class="btn btn-success" type="submit" id="submit">회원 로그인</button>
-						<button class="btn btn-default" type="submit" id="submit">매니저 로그인</button>
+						<button class="btn btn-success" type="submit" id="submit">로그인</button>
 						<button class="btn btn-danger" type="reset">취소</button>
 						<button class="btn btn-info" type="button" id="proRegisterBtn">회원가입</button>
 					</div>
@@ -47,8 +46,9 @@
 					<button id="proUpdateBtn" type="button">회원정보수정</button>
 					<button id="proDeleteBtn" type="button">회원탈퇴</button>
 					<button id="logoutBtn" type="button">로그아웃</button> 
+					<button id="mainBtn" type="button">메인으로</button>
 					<button id="boardBtn" type="button">게시판</button>
-					<button type="button" onclick="location.href='/product/productinsert'">제품 등록</button>
+					<button id="productBtn" type="button">상품리스트</button>
 					
 				</div>
 			</c:if>
@@ -98,9 +98,19 @@ $(document).ready(function(){
 	$("#proDeleteBtn").on("click",function(){
 		location.href="/login/proDelete";
 		});
+	//게시판버튼을 눌렀을 경우
 	$("#boardBtn").on("click",function(){
 		location.href="/board/boardList";
 		});
+	//상품리스트을 눌렀을 경우
+	$("#productBtn").on("click",function(){
+		location.href="/product/productlist";
+		});
+	//메인버튼을 눌렀을 경우
+	$("#mainBtn").on("click",function(){
+		location.href="/"
+		});
+	
 })
 
 </script>

@@ -295,10 +295,12 @@ cursor: pointer;
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/product/productlist">PRODUCT</a></li>
 				<li><a href="/board/boardList">COMMUNITY</a></li>
-			
+				
+				
 				<ul class="nav navbar-nav navbar-right">
-			      <li><a href="/chat/chat"><span class="glyphicon glyphicon-envelope"> CHAT</span></a>
-			      
+				<c:if test="${member != null }">
+			      <li><a href="/chat/chat"><span class="glyphicon glyphicon-envelope"> CHAT</span></a></li> 
+			     </c:if>
 			      <c:if test="${member == null}">
 			      <li><a href="/login/register"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
 			      </c:if>

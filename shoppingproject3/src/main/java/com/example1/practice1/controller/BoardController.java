@@ -66,13 +66,13 @@ public class BoardController {
 	 * logger.info("insert post...." + vo); service.insertBoard(vo); return
 	 * "/board/boardList"; }//end - private String postBoardInsert
 	 */
-	//파일 등록
-	@RequestMapping("/uploadInsert")
-	private String uploadInsert(FileDTO file, Model model) throws Exception{
-		logger.info("uploadInsert get...");
-		
-		return "/board/uploadInsert";
-	}
+//	//파일 등록
+//	@RequestMapping("/uploadInsert")
+//	private String uploadInsert(FileDTO file, Model model) throws Exception{
+//		logger.info("uploadInsert get...");
+//		
+//		return "/board/uploadInsert";
+//	}
 
 	@RequestMapping("/insertProc")
 	private String boardInsertProc(HttpServletRequest request) throws Exception {
@@ -81,7 +81,8 @@ public class BoardController {
 		BoardDTO boardDTO = new BoardDTO();
 		
 		logger.info("subject : " + request.getParameter("subject") );
-
+		
+		//입력할 창의 값들을 요청한다.
 		boardDTO .setSubject(request.getParameter("subject"));
 		boardDTO .setContent(request.getParameter("content"));
 		boardDTO .setWriter(request.getParameter("writer"));
@@ -91,7 +92,7 @@ public class BoardController {
 		
 		return "redirect:/board/boardList";
 		
-		}
+		}//end - private String boardInsertProc(HttpServletRequest request) throws Exception 
 
 	// 게시글 목록보기
 	@RequestMapping(value = "/boardList", method = { RequestMethod.GET, RequestMethod.POST })
@@ -101,6 +102,7 @@ public class BoardController {
 		List<BoardDTO> list = service.boardList(scri);
 		model.addAttribute("list", list);
 		
+		//페이징처리
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(scri);
 		pageMaker.setTotalCount(service.listCount(scri));
@@ -123,7 +125,7 @@ public class BoardController {
 		
 //		model.addAttribute("upload", service.uploadFileList(boardno));
 		return "/board/detailComment";
-	}// end - public String detail(@PathVariable int bno, Model model) throws
+	}// end - private String detail(@PathVariable int bno, Model model) throws
 		// Exception
 
 	// 댓글을 달수 있는 상세화면
@@ -131,8 +133,12 @@ public class BoardController {
 	private String comment(@PathVariable int boardno,Model model) throws Exception {
 
 		logger.info("comment get...");
-		model.addAttribute("detail", service.detail(boardno));// 게시글으리 정보를 가져와서 저장한다.
+		
+		// 게시글의 정보를 가져와서 저장한다.
+		model.addAttribute("detail", service.detail(boardno));
 		//model.addAttribute("comment", service.commentList(boardno));
+		
+		//게시글 조회수의 정보를 가져와서 저장한다.
 		model.addAttribute("board", service.boardHit(boardno));
 		
 		//댓글리스트 보기 
@@ -143,7 +149,7 @@ public class BoardController {
 		
 		return "/board/detailComment";
 
-	}// end - public String comment(@PathVariable int bno,Model model) throws
+	}// end - private String comment(@PathVariable int bno,Model model) throws
 		// Exception
 	
 
@@ -151,11 +157,13 @@ public class BoardController {
 	@RequestMapping(value = "/boardUpdate/{boardno}", method = RequestMethod.GET)
 	private String getUpdate(@PathVariable int boardno, Model model) throws Exception {
 		logger.info("update get.....");
+		
+		//게시글의 정보를 가져와서 저장한다.
 		model.addAttribute("detail", service.detail(boardno));
 		
 		
 		return "/board/boardUpdate";
-	}// end - public String getUpdate(@PathVariable int bno,Model model) throws
+	}// end - private String getUpdate(@PathVariable int bno,Model model) throws
 		// Exception
 
 	// 게시글 수정 화면에서 수정할 자료를 업데이트한다.
@@ -164,7 +172,8 @@ public class BoardController {
 
 		logger.info("updateproc get........");
 		BoardDTO boardDTO  = new BoardDTO();
-
+		
+		//수정할 창의 입력값들을 요청한다.
 		boardDTO .setSubject(request.getParameter("subject"));
 		boardDTO .setContent(request.getParameter("content"));
 		boardDTO .setBoardno(Integer.parseInt(request.getParameter("boardno")));

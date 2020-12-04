@@ -20,7 +20,7 @@
 	color: #f1f1f1;
 	border-radius: 4;
 	transition: .2s;
-	margin-left: 27%;
+	margin-left: 35%;
 }
 
 .carousel-inner img {
@@ -155,10 +155,10 @@
 								alt="이미지 업로드">
 								<ul>
 								  <li>제품명 : ${product.productname}</li>
-								  <li>가격 : ${product.productprice}원</li>
+								  <li>가격 : ${product.productprice} 원</li>
 								</ul>
 							<button class="btn" data-toggle="modal" data-target="#myModal" 
-							onclick="location.href='/product/productdetail/${product.productno}'">자세히 보기</button>
+							onclick="location.href='/product/detail2/${product.productno}'">Click</button>
 						</div>
 					</div>
 				</c:forEach>
@@ -293,3 +293,18 @@
 > : gt
 <= : le
 >= : ge --%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

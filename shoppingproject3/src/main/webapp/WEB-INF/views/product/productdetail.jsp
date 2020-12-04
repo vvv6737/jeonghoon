@@ -1,10 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="true"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="layoutTag" tagdir="/WEB-INF/tags"%>
+
 <layoutTag:layout>
-<!DOCTYPE html>
-<html>
+
+	<!DOCTYPE html>
+	<html>
 <head>
 <meta charset="UTF-8">
 <title>게시글 상세 정보</title>
@@ -22,7 +25,8 @@
 </style>
 </head>
 <body>
-<div class="container">
+
+	<div class="container">
 		<h2>게시글 상세 정보</h2>
 
 		<table class="table table-hover table-bordered">
@@ -46,7 +50,7 @@
 				</tr>
 			</thead>
 				<tr>
-					<td><img src="/static/upload/${productdetail.productimageName}" width="900px" alt="이미지 업로드" ><td>
+					<td><img src="/static/upload/${productdetail.productimageName}" alt="이미지 업로드" ><td>
 				</tr>
 		</table>
 		<c:if test = "${member != null}">

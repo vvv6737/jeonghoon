@@ -9,10 +9,6 @@
 <head>
 <meta charset="UTF-8">
 <title>boardList.jsp</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <style>
 .navbar-inverse .narbar-nav > .active > a,
 .navbar-inverse .narbar-nav > .active > a:focus,
@@ -23,7 +19,6 @@
 }
 	ul{list-style:none; float:center; padding:6px;}
 
-.search
 	
 </style>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -84,22 +79,22 @@
 	</ul>
 </div>
 
-
 <!-- 검색 버튼 -->
-	<div class="search">
-	    <select name="searchType">
-	      <option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
-	      <option value="s"<c:out value="${scri.searchType eq 's' ? 'selected' : ''}"/>>제목</option>
-	      <option value="c"<c:out value="${scri.searchType eq 'c' ? 'selected' : ''}"/>>내용</option>
-	      <option value="w"<c:out value="${scri.searchType eq 'w' ? 'selected' : ''}"/>>작성자</option>
-	      <option value="sc"<c:out value="${scri.searchType eq 'sc' ? 'selected' : ''}"/>>제목+내용</option>
-	    </select>
-	    
-	    <input type="text" name="keyword" id="keywordInput" value="${scri.keyword}"/>
-	    <button id="searchBtn" type="button">검색</button>
-	    
-    </div>
-    
+<div class="row" style="clear:right;width:400px;margin:auto">
+	<div class="col-lg-12">
+		<form id="searchForm" action="/board/boardList">
+			<select name="searchType">
+				<option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
+      		<option value="s"<c:out value="${scri.searchType eq 's' ? 'selected' : ''}"/>>제목</option>
+      		<option value="c"<c:out value="${scri.searchType eq 'c' ? 'selected' : ''}"/>>내용</option>
+      		<option value="w"<c:out value="${scri.searchType eq 'w' ? 'selected' : ''}"/>>작성자</option>
+      		<option value="sc"<c:out value="${scri.searchType eq 'sc' ? 'selected' : ''}"/>>제목+내용</option>
+				</select>
+			<input type="text" name="keyword" id="keywordInput" value="${scri.keyword}"/>
+			<button class="btn btn-primary btn-sm">검색</button>
+		</form>
+	</div>
+</div>
     
     
     
@@ -125,6 +120,7 @@ $(document).ready(function(){
 	});
 });
 </script>
+</div>
 </body>
 </html>
 </layoutTag:layout>

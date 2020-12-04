@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>댓글 보기</title>
+	<title>댓글을 달 수 있는 상세정보 화면</title>
 </head>
 <body>
 
@@ -61,6 +61,8 @@
 		<label for="comment">댓글</label>
 		<form name="commentInsertForm">
 			<div class="input-group">
+				
+				<!-- 정보들을 숨겨서 보낸다. -->
 				<input type="hidden" name="boardno" id="boardno" value="${detail.boardno}" />
 				<input type="hidden" name="replycontentid" id="replycontentid" value="${detail.boardno}" />
 				<input type="hidden" name="replywriterid" id="replywriterid" value="${member.userId}"/>
@@ -68,8 +70,6 @@
 				<input type="text" class="form-control" id="replytext" name="replytext" placeholder="댓글을 입력하십시오"/>
 				<span class="input-group-btn">
 					<button class="btn btn-warning" type="submit" name="commentInsertBtn">등록</button>
-					
-					
 				</span>
 			</div>
 		</form>
@@ -85,6 +85,9 @@
 	</div>
 </div>
 <script>
+
+
+
 $(document).ready(function(){
 	$(".btn-info").on("click",function(){
 		if(${member == null}){
@@ -101,6 +104,7 @@ $(document).ready(function(){
 			location.href="/login/login";
 			}
 		});
+	
 	})
 
 </script>
