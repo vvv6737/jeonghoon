@@ -10,9 +10,6 @@
 	<meta charset="UTF-8">
 	<title>게시글 작성</title>
 	<style>
-		.container{
-			margin-top: 5%;
-		}
 		.select_img img{margin: 20px 0;}
 	</style>
 </head>

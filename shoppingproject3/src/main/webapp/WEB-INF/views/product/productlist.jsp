@@ -11,7 +11,7 @@
 <link rel="icon" type="image/x-icon" href="/static/images/aland.jpg" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <meta charset="UTF-8">
-<title>product</title>
+<title>상품목록</title>
 
 <style>
 .btn {

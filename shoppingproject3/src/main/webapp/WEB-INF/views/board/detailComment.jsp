@@ -9,7 +9,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>댓글을 달 수 있는 상세정보 화면</title>
+	<title>댓글 상세 정보</title>
 </head>
 <body>
 

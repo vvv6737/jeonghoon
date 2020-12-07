@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>proUpdate.jsp</title>
+<title>회원정보수정</title>
 </head>
 <body>		
 <div class="container-fluid">

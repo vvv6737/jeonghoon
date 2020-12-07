@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>boardList.jsp</title>
+<title>게시물 목록</title>
 <style>
 .navbar-inverse .narbar-nav > .active > a,
 .navbar-inverse .narbar-nav > .active > a:focus,

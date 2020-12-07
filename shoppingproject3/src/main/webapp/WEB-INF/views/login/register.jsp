@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>register.jsp</title>
+<title>회원가입</title>
 <style>
 	*{
 		font-size: 16px;
