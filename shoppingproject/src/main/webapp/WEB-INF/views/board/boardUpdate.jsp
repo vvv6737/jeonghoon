@@ -10,6 +10,7 @@
 <meta charset="UTF-8">
 <title>게시글 수정</title>
 </head>
+
 <div class="container-fluid">
 	<h2 align="left">게 시 글 작 성</h2>
 	<form class="form-horizontal" action="/board/updateProc" method="post">
@@ -26,11 +27,10 @@
 			<textarea rows="4" cols="100" class="form-control" id="content" name="content" placeholder="내용을 입력하세요"></textarea>
 			<input type="hidden" name="boardno" value="${boardno}"/>
 			<button type="submit" class="btn btn-primary">수 정</button>
-			
 		</div>
-		
 	</form>
 </div>
+
 <script>
 $(document).ready(function(){
 	$(".btn-primary").on("click",function(){

@@ -126,7 +126,6 @@ cursor: pointer;
 				    <a href="#">BUTTOM</a>
 				    <a href="#">ACC</a>
 				    <a href="/product/productlist">PRODUCT</a>
-				    <a href="/product/productinsert">PRODUCTUPLOAD</a>
 					<a href="/board/boardList">COMMUNITY</a>
 				    <a href="#about">About</a>
 				    <a href="#contact">Contact</a>

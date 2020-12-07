@@ -47,7 +47,6 @@
 				
 	</form>	
 </div>
-
 </body>
 </html>
 </layoutTag:layout>

@@ -123,14 +123,9 @@ function commentDelete(replyno){
 			}
 		});
 	}
-
 //페이지 로딩시 게시글에 연결된 댓글이 있으면 무조건 댓글을 보여준다.
 $(document).ready(function(){
 	//alert("commentList called......");
 	commentList();
-	
 });
-
 </script>
-
-

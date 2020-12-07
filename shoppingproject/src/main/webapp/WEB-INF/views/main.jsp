@@ -90,15 +90,16 @@
 	</div>
 	<div class="w3-padding-64 w3-large w3-text-grey"
 		style="font-weight: bold">
-		<a href="#" class="w3-bar-item w3-button">TOP</a>
-		<a href="#" class="w3-bar-item w3-button">BOTTOM</a>
-		<a href="#" class="w3-bar-item w3-button">ACC</a>
-		<a href="#" class="w3-bar-item w3-button">SHOES</a>
-		<a href="#" class="w3-bar-item w3-button">SALE</a>
+		<a href="/product/productlist/1" class="w3-bar-item w3-button">Shirts</a> 
+		<a href="/product/productlist/2" class="w3-bar-item w3-button">Dresses</a> 
+		<a onclick="myAccFunc()" href="/product/productlist/3" class="w3-bar-item w3-button">Jeans</a>
+		<a href="/product/productlist/4" class="w3-bar-item w3-button">Jackets</a>
+		<a href="/product/productlist/5" class="w3-bar-item w3-button">Gymwear</a> 
+		<a href="/product/productlist/6" class="w3-bar-item w3-button">Blazers</a> 
+		<a href="/product/productlist/7" class="w3-bar-item w3-button">Shoes</a>
 	</div>
-	<br><br><br><br><br><br><br><br>
-	<a href="#contact" class="w3-bar-item w3-button w3-padding">Contact</a>
-	<a href="#footer" class="w3-bar-item w3-button w3-padding">Subscribe</a>
+	<!-- <br><br><br><br><br><br><br><br>
+	<a href="#contact" class="w3-bar-item w3-button w3-padding">Contact</a> -->
 </nav>
 
 
@@ -190,12 +191,12 @@
 					</div>
 
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/productdetail/2'"> <img
+						<a onclick="location.href='/product/detail2/5'"> <img
 							src="/static/images/accc.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/productdetail/2'">악세사리</a>
+							<a onclick="location.href='/product/detail2/5'">악세사리</a>
 						</p>
 					</div>
 				</div>
@@ -397,13 +398,19 @@
 				</p>
 			</div>
 			<div class="well">
-				<p>신상</p>
+				<p>
+					<a href="#">신상</a>
+				</p>
 			</div>
 			<div class="well">
-				<p>세일</p>
+				<p>
+					<a href="#">세일</a>
+				</p>
 			</div>
 			<div class="well">
-				<p>잠바</p>
+				<p>
+					<a href="#">잠바</a>
+				</p>
 			</div>
 		</div>
 	</div>

@@ -18,7 +18,6 @@
 	background-color:red
 }
 	ul{list-style:none; float:center; padding:6px;}
-
 	
 </style>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

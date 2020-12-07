@@ -8,7 +8,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>게시글 작성</title>
+	<title>상품 업데이트</title>
 	<style>
 		.select_img img{margin: 20px 0;}
 	</style>
@@ -16,7 +16,7 @@
 <body>
 
 <div class="container">
-	<h2>게시글 작성</h2>
+	<h2>상품 업데이트</h2>
 	<form class="form-horizontal" action="/product/insertProc" method="post" enctype="multipart/form-data">
 		
 		<div class="inputArea">
