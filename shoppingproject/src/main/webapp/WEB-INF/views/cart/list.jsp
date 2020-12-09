@@ -40,7 +40,7 @@
 				<th>수량</th>
 				<!--  <th>구매아이디</th>-->
 				<th>일자</th>
-				<th>삭제</th>
+				<th></th>
 			</tr>
 		</thead>
 			<c:forEach var="cart" items="${list}">
@@ -52,8 +52,10 @@
 				<td>${cart.productsalescnt}</td>
 				<!-- <td>${member.getUserId()}</td> -->
 				<td><fmt:formatDate value="${cart.cartdate}" pattern="yyyy년 MM월 dd일"/></td>
-				<td><button type="button" class="btn btn-danger" onclick="location.href='/cart/cartDelete/${cart.cartno}'">삭제</button></td>
+				<td><button type="button" class="btn btn-danger" onclick="location.href='/cart/cartDelete/${cart.cartno}',alert('삭제 완료')">삭제</button>
+				<button class="btn btn-warning"  onclick="location.href='/cart/cartDelete/${cart.cartno}',alert('구매 완료')">구매 하기</button></td>
 			</tr>
+				
 			</c:forEach>
 		<tbody>
 		</tbody>
@@ -63,9 +65,7 @@
 </div>
 
 </body>
-
 </html>
-
 </layoutTag:layout>
 
 

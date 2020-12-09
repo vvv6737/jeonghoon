@@ -44,13 +44,17 @@
 </style>
 </head>
 <body>
-	<div class=" text-center">
-		<p>상품 목록입니다!</p>
-	</div>
+	
 
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-10">
+		
+			<div class="col-sm-14">
+			<br>
+	<div class=" text-center">
+	<img src="/static/images/best_main.png" alt="모델1">
+	</div>
+	<br>
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -96,7 +100,14 @@
 				</div>
 			</div>
 				
-			<div class="col-sm-10">
+				
+				
+			<div class="col-sm-13">
+			<br>
+			<div class=" text-center">
+			<img src="/static/images/category.png">
+			</div>
+			<br>
 				<c:forEach var="product" items="${list}">
 					<div class="col-sm-3">
 						<div class="thumbnail">
@@ -114,8 +125,8 @@
 			</div>
 		</div>
 	</div>
-
-
+	
+	
 		<div id="paginationBox" >
 			<ul class="pagination">
 				<c:if test="${productpagination.prev}">
@@ -242,18 +253,3 @@
 > : gt
 <= : le
 >= : ge --%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

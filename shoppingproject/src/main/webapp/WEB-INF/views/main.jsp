@@ -236,15 +236,13 @@
 				</p>
 			</div>
 		</div>
-		
 	</div>
 </div>
-
+<br>
 <!-- 밑의 여섯칸 쇼핑몰 창 -->
 <div class="container">
 	<div class="row">
-		<a
-			href="http://www.11st.co.kr/products/2801850298?trTypeCd=22&trCtgrNo=895019">
+		<a href="http://www.11st.co.kr/products/2801850298?trTypeCd=22&trCtgrNo=895019">
 			<div class="col-sm-4">
 				<div class="panel panel-primary">
 					<div class="panel-heading">BLACK FRIDAY DEAL</div>
@@ -324,9 +322,12 @@
 		</div>
 	</div>
 </div>
-<br>
-<br>
+
+
+<div class=" text-center">
+	<img src="/static/images/board.png">
 </div>
+<br>
 
 <!-- 밑 그 외 나머지 것들 -->
 <div class="container">
@@ -435,6 +436,5 @@ $(document).ready(function(){
 })
 </script>
 </body>
-
 	</html>
 </layoutTag:layout>

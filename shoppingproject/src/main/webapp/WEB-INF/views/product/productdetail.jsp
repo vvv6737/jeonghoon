@@ -27,7 +27,7 @@
 <body>
 
 	<div class="container">
-		<h2>게시글 상세 정보 ${member.userId}</h2>
+		<h2>게시글 상세 정보 /${member.userId}</h2>
 		
 		<table class="table table-hover table-bordered">
 			<thead>
@@ -74,7 +74,7 @@
 					</c:forEach>
 				</select>
 		<button class="btn btn-warning"
-			onclick="#'">구매 하기</button>
+			onclick="'location.href='/cart/list'">구매 하기</button>
 		<input type="submit" value="장바구니담기">
 		</c:if>
 		<c:if test = "${member == null}">
@@ -101,3 +101,37 @@ function button1_click() {
 </html>
 </layoutTag:layout>
 <!-- layoutTag를 적용하므로 bootstrap.jsp 파일이 필요 업어졌다. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
