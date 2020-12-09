@@ -8,31 +8,15 @@
 	<!DOCTYPE html>
 	<html>
 <head>
-<link rel="icon" type="image/x-icon" href="/static/images/aland.jpg" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-
 <meta charset="UTF-8">
 <title>메인</title>
+<script type="text/javascript" src="/static/jquery/lib/jquery.js"></script>
+<script type='text/javascript' src='/static/jquery/lib/jquery.bgiframe.min.js'></script>
+<script type='text/javascript' src='/static/jquery/lib/jquery.ajaxQueue.js'></script>
+<script type='text/javascript' src='/static/jquery/jquery.autocomplete.js'></script>
+<link rel="stylesheet" type="text/css" href="/static/jquery/jquery.autocomplete.css" />
 <style>
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {
-	height: 450px
-}
-
-/* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
-	.sidenav {
-		height: auto;
-		padding: 15px;
-	}
-	.row.content {
-		height: auto;
-	}
-}
-
 .w3-sidebar a {
 	font-family: "Roboto", sans-serif
 }
@@ -51,7 +35,7 @@
 	min-height: 80%;
 }
 
-/* 스크롤 */
+/* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
 	.bgimg-1 {
 		background-attachment: scroll;
@@ -65,9 +49,6 @@
 	}
 }
 
-.container-fluid {
-	font-family: 'Nanum Gothic', sans-serif;
-}
 </style>
 </head>
 <!-- 메인사진(글) -->
@@ -93,60 +74,62 @@
 		<a href="/product/productlist/1" class="w3-bar-item w3-button">Shirts</a> 
 		<a href="/product/productlist/2" class="w3-bar-item w3-button">Dresses</a> 
 		<a onclick="myAccFunc()" href="/product/productlist/3" class="w3-bar-item w3-button">Jeans</a>
+		<div id="demoAcc"class="w3-bar-block w3-hide w3-padding-large w3-medium">
+		<a href="/product/productlist/3" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
+	</div>
 		<a href="/product/productlist/4" class="w3-bar-item w3-button">Jackets</a>
 		<a href="/product/productlist/5" class="w3-bar-item w3-button">Gymwear</a> 
 		<a href="/product/productlist/6" class="w3-bar-item w3-button">Blazers</a> 
 		<a href="/product/productlist/7" class="w3-bar-item w3-button">Shoes</a>
 	</div>
-	<!-- <br><br><br><br><br><br><br><br>
-	<a href="#contact" class="w3-bar-item w3-button w3-padding">Contact</a> -->
 </nav>
 
-
+<!-- 검색창 -->
 <div class="container">
-	<form class="form-inline">
-		<input type="text" class="form-control" size="100"
+	<form class="form-inline" action="/product/searchList" method="post">
+		<input type="text" class="form-control" id="searchBox" name="searchName" size="100"
 			placeholder="검색어를 입력하세요">
-		<button type="button" class="btn btn-info">검색</button>
+		<button type="submit">검색</button>
 	</form>
 </div>
 
+
+<!-- 메인가운데 -->
 <div class="container-fluid text-center">
 	<div class="row content">
 		<div class="col-sm-1 sidenav"></div>
 		<div class="col-sm-9 text-left">
-		
 			<div class="container-fluid bg-4 text-center">
 				<h3>상품 둘러보기</h3>
 				<br>
 				<div class="row">
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/detail2/2'"> <img
+						<a onclick="location.href='/product/productdetail/2'"> <img
 							src="https://www.itnk.co.kr/news/photo/202010/65304_28792_3141.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/detail2/2'">휠라</a>
+							<a onclick="location.href='/product/productdetail/2'">휠라</a>
 						</p>
 					</div>
 
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/detail2/1'"> <img
+						<a onclick="location.href='/product/productdetail/1'"> <img
 							src="/static/images/셔츠c.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/detail2/1'">셔츠</a>
+							<a onclick="location.href='/product/productdetail/1'">셔츠</a>
 						</p>
 					</div>
 
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/detail2/4'"> <img
+						<a onclick="location.href='/product/productdetail/4'"> <img
 							src="/static/images/mtm.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/detail2/4'">맨투맨</a>
+							<a onclick="location.href='/product/productdetail/4'">맨투맨</a>
 						</p>
 					</div>
 
@@ -181,22 +164,22 @@
 					</div>
 
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/detail2/3'"> <img
+						<a onclick="location.href='/product/productdetail/3'"> <img
 							src="/static/images/shoes.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/detail2/3'">신발</a>
+							<a onclick="location.href='/product/productdetail/3'">신발</a>
 						</p>
 					</div>
 
 					<div class="col-sm-3">
-						<a onclick="location.href='/product/detail2/5'"> <img
+						<a onclick="location.href='/product/productdetail/5'"> <img
 							src="/static/images/accc.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 						</a>
 						<p>
-							<a onclick="location.href='/product/detail2/5'">악세사리</a>
+							<a onclick="location.href='/product/productdetail/5'">악세사리</a>
 						</p>
 					</div>
 				</div>
@@ -257,16 +240,17 @@
 	</div>
 </div>
 
-
 <!-- 밑의 여섯칸 쇼핑몰 창 -->
 <div class="container">
 	<div class="row">
-		<a href="http://www.11st.co.kr/products/2801850298?trTypeCd=22&trCtgrNo=895019">
+		<a
+			href="http://www.11st.co.kr/products/2801850298?trTypeCd=22&trCtgrNo=895019">
 			<div class="col-sm-4">
 				<div class="panel panel-primary">
 					<div class="panel-heading">BLACK FRIDAY DEAL</div>
 					<div class="panel-body">
-						<img src="https://cdn.011st.com/11dims/resize/400x400/quality/75/11src/pd/20/4/0/6/2/0/9/FBZSr/2884406209_L300.jpg"
+						<img
+							src="https://cdn.011st.com/11dims/resize/400x400/quality/75/11src/pd/20/4/0/6/2/0/9/FBZSr/2884406209_L300.jpg"
 							class="img-responsive" style="width: 100%" alt="Image">
 					</div>
 					<div class="panel-footer">[40%]데이데이 매일 입고 싶은 겨울코디!
@@ -298,7 +282,6 @@
 				<div class="panel-footer">[K2]다가오늘 겨울 성인&키즈 BEST 다운&플리스&점퍼 모음!</div>
 			</div>
 		</div>
-		
 	</div>
 </div>
 <br>
@@ -394,28 +377,63 @@
 		<div class="col-sm-4">
 			<div class="well">
 				<p>
-					<a href="#">자세히 보기</a>
+					<a href="/board/detailComment/5">인기 게시글</a>
 				</p>
 			</div>
 			<div class="well">
 				<p>
-					<a href="#">신상</a>
+					<a href="/board/detailComment/7">신상</a>
 				</p>
 			</div>
 			<div class="well">
 				<p>
-					<a href="#">세일</a>
+					<a href="/board/detailComment/8">세일</a>
 				</p>
 			</div>
 			<div class="well">
 				<p>
-					<a href="#">잠바</a>
+					<a href="/board/detailComment/1">잠바</a>
 				</p>
 			</div>
 		</div>
 	</div>
 </div>
-<hr id="contact">
+<script>
+	var availableTags = [
+							'셔츠',
+							'반팔 셔츠',
+							'긴팔 셔츠',
+							'shirts',
+							'Shirts',
+							'드레스',
+							'dress',
+							'Dress',
+							'바지',
+							'긴바지',
+							'반바지',
+							'jeans',
+							'Jeans',
+							'자켓',
+							'jackets',
+							'Jackets',
+							'블레이져',
+							'blazers',
+							'신발',
+							'운동화',
+							'구두',
+							'샌들',
+							'Shoes',
+							'shoes'
+						];
+</script>
+<script>
+$(document).ready(function(){
+	$("#searchBox").autocomplete(availableTags,{
+			matchContains:true,
+			selectFirst : false
+		});
+})
+</script>
 </body>
 
 	</html>

@@ -8,10 +8,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시글 수정</title>
+<title>Update.jsp</title>
 </head>
 <div class="container-fluid">
-	<h2 align="left">게 시 글 엡데이트</h2>
+	<h2 align="left">게 시 글 업데이트</h2>
 	<form class="form-horizontal" action="/product/updateProc" method="post">
 		<div class="inputArea">
 			<label for="productimagefile">이미지</label>
@@ -47,6 +47,7 @@
 				
 	</form>	
 </div>
+
 </body>
 </html>
 </layoutTag:layout>

@@ -10,7 +10,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>게시글 상세 정보</title>
+<title>Insert title here</title>
 </head>
 <body>
 <div class="container-fluid">

@@ -17,7 +17,7 @@
   color: orange;
 }
 </style>
-<title>게시글</title>
+<title>Insert title here</title>
 </head>
 <body>
 <div class="container-fluid">

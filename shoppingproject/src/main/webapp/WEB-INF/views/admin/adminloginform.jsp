@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>관리자</title>
+<title>Insert title here</title>
 
 </head>
 <body>

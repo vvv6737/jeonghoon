@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>게시글 쓰기</title>
+<title>boardInsert.jsp</title>
 </head>
 <body>
 <div class="container-fluid">

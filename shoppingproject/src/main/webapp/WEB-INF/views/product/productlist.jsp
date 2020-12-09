@@ -5,13 +5,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="layoutTag" tagdir="/WEB-INF/tags"%>
 <layoutTag:layout>
-<!DOCTYPE html>
-<html>
+	<!DOCTYPE html>
+	<html>
 <head>
 <link rel="icon" type="image/x-icon" href="/static/images/aland.jpg" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <meta charset="UTF-8">
-<title>상품목록</title>
+<title>product</title>
+
 <style>
 .btn {
 	padding: 8px 10px;
@@ -44,8 +45,7 @@
 </head>
 <body>
 	<div class=" text-center">
-		<h1 id="fofo">다양한 마이스터</h1>
-		<p>각각의 장인들이 올린 작품들을 확인해보세요</p>
+		<p>상품 목록입니다!</p>
 	</div>
 
 	<div class="container">
@@ -95,6 +95,7 @@
 					</a>
 				</div>
 			</div>
+				
 			<div class="col-sm-10">
 				<c:forEach var="product" items="${list}">
 					<div class="col-sm-3">
@@ -106,15 +107,45 @@
 								  <li>가격 : ${product.productprice} 원</li>
 								</ul>
 							<button class="btn" data-toggle="modal" data-target="#myModal" 
-							onclick="location.href='/product/detail2/${product.productno}'">더보기</button>
+							onclick="location.href='/product/productdetail/${product.productno}'">Click</button>
 						</div>
 					</div>
 				</c:forEach>
 			</div>
 		</div>
 	</div>
-	
-	
+
+
+		<div id="paginationBox" >
+			<ul class="pagination">
+				<c:if test="${productpagination.prev}">
+
+					<li class="page-item"><a class="page-link" href="#"
+						onClick="fn_prev('${productpagination.page}', '${productpagination.range}', '${productpagination.rangeSize}')">Previous</a></li>
+
+				</c:if>
+				<c:forEach begin="${productpagination.startPage}"
+					end="${pagination.endPage}" var="idx">
+
+					<li
+						class="page-item <c:out value="${productpagination.page == idx ? 'active' : ''}"/> "><a
+						class="page-link" href="#"
+						onClick="fn_pagination('${idx}', '${productpagination.range}', '${productpagination.rangeSize}')">
+							${idx} </a></li>
+
+				</c:forEach>
+
+				<c:if test="${pagination.next}">
+
+					<li class="page-item"><a class="page-link" href="#"
+						onClick="fn_next('${productpagination.range}','${productpagination.range}', '${productpagination.rangeSize}')">Next</a></li>
+
+				</c:if>
+
+			</ul>
+
+		</div>
+
 	<script>
 		$(document).ready(
 				function() {
@@ -144,13 +175,65 @@
 										window.location.hash = hash;
 									});
 								} // End if
-						});
+							});
 				})
 	</script>
-	
+<script>
+		//이전 버튼 이벤트
+
+		function fn_prev(page, range, rangeSize) {
+
+			var page = ((range - 2) * rangeSize) + 1;
+
+			var range = range - 1;
+
+			var url = "${pageContext.request.contextPath}/product/productlist";
+
+			url = url + "?page=" + page;
+
+			url = url + "&range=" + range;
+
+			location.href = url;
+
+		}
+
+		//페이지 번호 클릭
+
+		function fn_pagination(page, range, rangeSize, searchType, keyword) {
+
+			var url = "${pageContext.request.contextPath}/product/productlist";
+
+			url = url + "?page=" + page;
+
+			url = url + "&range=" + range;
+
+			location.href = url;
+
+		}
+
+		//다음 버튼 이벤트
+
+		function fn_next(page, range, rangeSize) {
+
+			var page = parseInt((range * rangeSize)) + 1;
+
+			var range = parseInt(range) + 1;
+
+			var url = "${pageContext.request.contextPath}/product/productlist";
+
+			url = url + "?page=" + page;
+
+			url = url + "&range=" + range;
+
+			location.href = url;
+
+		}
+	</script>
+
 </layoutTag:layout>
 </body>
 </html>
+
 
 <!-- layoutTag를 적용하므로 bootstrap.jsp 파일이 필요 없어졌다. -->
 <%--== : eq
@@ -159,3 +242,18 @@
 > : gt
 <= : le
 >= : ge --%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>회원탈퇴</title>
+<title>register.jsp</title>
 </head>
 <body>
 <div class="container-fluid">
