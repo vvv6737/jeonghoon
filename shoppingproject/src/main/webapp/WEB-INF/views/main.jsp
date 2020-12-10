@@ -12,10 +12,15 @@
 <meta charset="UTF-8">
 <title>메인</title>
 <script type="text/javascript" src="/static/jquery/lib/jquery.js"></script>
-<script type='text/javascript' src='/static/jquery/lib/jquery.bgiframe.min.js'></script>
-<script type='text/javascript' src='/static/jquery/lib/jquery.ajaxQueue.js'></script>
-<script type='text/javascript' src='/static/jquery/jquery.autocomplete.js'></script>
-<link rel="stylesheet" type="text/css" href="/static/jquery/jquery.autocomplete.css" />
+<script type='text/javascript'
+	src='/static/jquery/lib/jquery.bgiframe.min.js'></script>
+<script type='text/javascript'
+	src='/static/jquery/lib/jquery.ajaxQueue.js'></script>
+<script type='text/javascript'
+	src='/static/jquery/jquery.autocomplete.js'></script>
+<link rel="stylesheet" type="text/css"
+	href="/static/jquery/jquery.autocomplete.css" />
+	
 <style>
 .w3-sidebar a {
 	font-family: "Roboto", sans-serif
@@ -48,7 +53,6 @@
 		font-family: "Montserrat", sans-serif;
 	}
 }
-
 </style>
 </head>
 <!-- 메인사진(글) -->
@@ -71,15 +75,19 @@
 	</div>
 	<div class="w3-padding-64 w3-large w3-text-grey"
 		style="font-weight: bold">
-		<a href="/product/productlist/1" class="w3-bar-item w3-button">Shirts</a> 
-		<a href="/product/productlist/2" class="w3-bar-item w3-button">Dresses</a> 
-		<a onclick="myAccFunc()" href="/product/productlist/3" class="w3-bar-item w3-button">Jeans</a>
-		<div id="demoAcc"class="w3-bar-block w3-hide w3-padding-large w3-medium">
-		<a href="/product/productlist/3" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
-	</div>
+		<a href="/product/productlist/1" class="w3-bar-item w3-button">Shirts</a>
+		<a href="/product/productlist/2" class="w3-bar-item w3-button">Dresses</a>
+		<a onclick="myAccFunc()" href="/product/productlist/3"
+			class="w3-bar-item w3-button">Jeans</a>
+		<div id="demoAcc"
+			class="w3-bar-block w3-hide w3-padding-large w3-medium">
+			<a href="/product/productlist/3"
+				class="w3-bar-item w3-button w3-light-grey"><i
+				class="fa fa-caret-right w3-margin-right"></i>Skinny</a>
+		</div>
 		<a href="/product/productlist/4" class="w3-bar-item w3-button">Jackets</a>
-		<a href="/product/productlist/5" class="w3-bar-item w3-button">Gymwear</a> 
-		<a href="/product/productlist/6" class="w3-bar-item w3-button">Blazers</a> 
+		<a href="/product/productlist/5" class="w3-bar-item w3-button">Gymwear</a>
+		<a href="/product/productlist/6" class="w3-bar-item w3-button">Blazers</a>
 		<a href="/product/productlist/7" class="w3-bar-item w3-button">Shoes</a>
 	</div>
 </nav>
@@ -87,8 +95,8 @@
 <!-- 검색창 -->
 <div class="container">
 	<form class="form-inline" action="/product/searchList" method="post">
-		<input type="text" class="form-control" id="searchBox" name="searchName" size="100"
-			placeholder="검색어를 입력하세요">
+		<input type="text" class="form-control" id="searchBox"
+			name="searchName" size="100" placeholder="검색어를 입력하세요">
 		<button type="submit">검색</button>
 	</form>
 </div>
@@ -115,8 +123,8 @@
 
 					<div class="col-sm-3">
 						<a onclick="location.href='/product/productdetail/1'"> <img
-							src="/static/images/셔츠c.jpg"
-							class="img-responsive" style="width: 100%" alt="Image">
+							src="/static/images/셔츠c.jpg" class="img-responsive"
+							style="width: 100%" alt="Image">
 						</a>
 						<p>
 							<a onclick="location.href='/product/productdetail/1'">셔츠</a>
@@ -125,8 +133,8 @@
 
 					<div class="col-sm-3">
 						<a onclick="location.href='/product/productdetail/4'"> <img
-							src="/static/images/mtm.jpg"
-							class="img-responsive" style="width: 100%" alt="Image">
+							src="/static/images/mtm.jpg" class="img-responsive"
+							style="width: 100%" alt="Image">
 						</a>
 						<p>
 							<a onclick="location.href='/product/productdetail/4'">맨투맨</a>
@@ -145,8 +153,8 @@
 
 					<div class="col-sm-3">
 						<a onclick="location.href='/product/productdetail/2'"> <img
-							src="/static/images/mtm2.jpg"
-							class="img-responsive" style="width: 100%" alt="Image">
+							src="/static/images/mtm2.jpg" class="img-responsive"
+							style="width: 100%" alt="Image">
 						</a>
 						<p>
 							<a onclick="location.href='/product/productdetail/2'">목폴라 맨투맨</a>
@@ -155,8 +163,8 @@
 
 					<div class="col-sm-3">
 						<a onclick="location.href='/product/productdetail/2'"> <img
-							src="/static/images/Coatc.jpg"
-							class="img-responsive" style="width: 100%" alt="Image">
+							src="/static/images/Coatc.jpg" class="img-responsive"
+							style="width: 100%" alt="Image">
 						</a>
 						<p>
 							<a onclick="location.href='/product/productdetail/2'">골덴코트</a>
@@ -165,8 +173,8 @@
 
 					<div class="col-sm-3">
 						<a onclick="location.href='/product/productdetail/3'"> <img
-							src="/static/images/shoes.jpg"
-							class="img-responsive" style="width: 100%" alt="Image">
+							src="/static/images/shoes.jpg" class="img-responsive"
+							style="width: 100%" alt="Image">
 						</a>
 						<p>
 							<a onclick="location.href='/product/productdetail/3'">신발</a>
@@ -175,8 +183,8 @@
 
 					<div class="col-sm-3">
 						<a onclick="location.href='/product/productdetail/5'"> <img
-							src="/static/images/accc.jpg"
-							class="img-responsive" style="width: 100%" alt="Image">
+							src="/static/images/accc.jpg" class="img-responsive"
+							style="width: 100%" alt="Image">
 						</a>
 						<p>
 							<a onclick="location.href='/product/productdetail/5'">악세사리</a>
@@ -239,10 +247,65 @@
 	</div>
 </div>
 <br>
+
+
+
+<div class=" text-center">
+	<img src="/static/images/brand.png">
+</div>
+<br>
+<div class="container">
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="/static/images/pick1.jpg" alt="Los Angeles"
+					style="width: 100%;">
+			</div>
+
+			<div class="item">
+				<img src="/static/images/pick2.jpg" alt="Chicago"
+					style="width: 100%;">
+			</div>
+
+			<div class="item">
+				<img src="/static/images/pick3.jpg" alt="New york"
+					style="width: 100%;">
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span> <span
+			class="sr-only">Previous</span>
+		</a> <a class="right carousel-control" href="#myCarousel"
+			data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right"></span> <span
+			class="sr-only">Next</span>
+		</a>
+	</div>
+</div>
+
+<br>
+
+<div class=" text-center">
+	<img src="/static/images/sale.png">
+</div>
+
+<br>
+
 <!-- 밑의 여섯칸 쇼핑몰 창 -->
 <div class="container">
 	<div class="row">
-		<a href="http://www.11st.co.kr/products/2801850298?trTypeCd=22&trCtgrNo=895019">
+		<a
+			href="http://www.11st.co.kr/products/2801850298?trTypeCd=22&trCtgrNo=895019">
 			<div class="col-sm-4">
 				<div class="panel panel-primary">
 					<div class="panel-heading">BLACK FRIDAY DEAL</div>
@@ -324,116 +387,19 @@
 </div>
 
 
-<div class=" text-center">
-	<img src="/static/images/board.png">
-</div>
-<br>
-
-<!-- 밑 그 외 나머지 것들 -->
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8">
-			<div id="myCarousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-				</ol>
-
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img
-							src="https://mblogthumb-phinf.pstatic.net/MjAxOTA0MDhfNCAg/MDAxNTU0NjcyNzk1NTU5.6qDawyE1ZcAr1VeERaZSSU98_QhsMTHDDvskdat19Y0g.VDieUeTr-L52qsli0RH_aru0TX6LD_gnA1FqLpPsAwMg.JPEG.nanast1004/C_2639_R2_nanast1004_(13).jpg?type=w800"
-							alt="Image">
-						<div class="carousel-caption">
-							<h3>남자 코트</h3>
-							<p>사세요 얼른</p>
-						</div>
-					</div>
-
-					<div class="item">
-						<img
-							src="https://mblogthumb-phinf.pstatic.net/MjAxOTExMTdfODcg/MDAxNTczOTkxNDc2NTYx.OHlBIfSGhFrn9dciVK-GsWzEnMe0Ki0qnEyqywWYSuog.vdO0x4DEAl3hXNQYuPJrg4oMeedSUyIrIFkW1JdECbEg.JPEG.whoknows_/ami-paris-womens-double-breasted-coat_13817077_22595964_1000-side.jpg?type=w800"
-							alt="Image">
-						<div class="carousel-caption">
-							<h3>여자 코트</h3>
-							<p>이쁩니다</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel" role="button"
-					data-slide="prev"> <span
-					class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a> <a class="right carousel-control" href="#myCarousel" role="button"
-					data-slide="next"> <span
-					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-			</div>
-		</div>
-		<div class="col-sm-4">
-			<div class="well">
-				<p>
-					<a href="/board/detailComment/5">인기 게시글</a>
-				</p>
-			</div>
-			<div class="well">
-				<p>
-					<a href="/board/detailComment/7">신상</a>
-				</p>
-			</div>
-			<div class="well">
-				<p>
-					<a href="/board/detailComment/8">세일</a>
-				</p>
-			</div>
-			<div class="well">
-				<p>
-					<a href="/board/detailComment/1">잠바</a>
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
 <script>
-	var availableTags = [
-							'셔츠',
-							'반팔 셔츠',
-							'긴팔 셔츠',
-							'shirts',
-							'Shirts',
-							'드레스',
-							'dress',
-							'Dress',
-							'바지',
-							'긴바지',
-							'반바지',
-							'jeans',
-							'Jeans',
-							'자켓',
-							'jackets',
-							'Jackets',
-							'블레이져',
-							'blazers',
-							'신발',
-							'운동화',
-							'구두',
-							'샌들',
-							'Shoes',
-							'shoes'
-						];
+	var availableTags = [ '셔츠', '반팔 셔츠', '긴팔 셔츠', 'shirts', 'Shirts', '드레스',
+			'dress', 'Dress', '바지', '긴바지', '반바지', 'jeans', 'Jeans', '자켓',
+			'jackets', 'Jackets', '블레이져', 'blazers', '신발', '운동화', '구두', '샌들',
+			'Shoes', 'shoes' ];
 </script>
 <script>
-$(document).ready(function(){
-	$("#searchBox").autocomplete(availableTags,{
-			matchContains:true,
+	$(document).ready(function() {
+		$("#searchBox").autocomplete(availableTags, {
+			matchContains : true,
 			selectFirst : false
 		});
-})
+	})
 </script>
 </body>
 	</html>

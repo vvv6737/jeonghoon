@@ -18,7 +18,7 @@
 	}
 </style>
 <meta charset="UTF-8">
-<title>searchList.jsp</title>
+<title>검색리스트</title>
 </head>
 <body>
 	<div class="container">

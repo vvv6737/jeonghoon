@@ -87,9 +87,14 @@
 			onclick="button1_click()">구매 하기</button>
 		
 		</c:if>
+		
+		
+		<c:if test="${admin != null}">
+      <button class="btn btn-success" onclick="location.href='/product/Update/${productdetail.productno}'">수정</button>
+      <button class="btn btn-danger"  onclick="location.href='/product/delete/${productdetail.productno}'">삭제</button>
+      </c:if>
 	</form>
 </div>
-
 
 <script>
 function button1_click() {
